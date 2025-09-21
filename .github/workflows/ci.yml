@@ -55,5 +55,7 @@ jobs:
         with:
           file_path: artifact/similarity/build/distributions/similarity.tar
           extract_dir: dist
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
       - name: Test Similarity
         run: scripts/e2e-integration-test.sh
